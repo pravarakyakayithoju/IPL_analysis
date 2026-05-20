@@ -55,21 +55,27 @@ An interactive Power BI dashboard analyzing 16 seasons of IPL data
 
 ## ⚙️ How to Run
 
-### Python Import
-```python
+### Prerequisites
+- Python 3.x
+- MySQL Server
+- Power BI Desktop
+
+### Installation
 pip install pandas mysql-connector-python
-python python/ipl_import.py
-```
 
-### SQL Analysis
-- Open MySQL Workbench
-- Run sql/ipl_analysis.sql
+### Step 1 - Data Cleaning
+python python/ipl_cleaning.py
 
-### View Dashboard
-- Open dashboard/IPL_Dashboard.pbix in Power BI Desktop
+### Step 2 - Database Setup
+Run sql/ipl_analysis.sql in MySQL Workbench
 
----
+### Step 3 - Import Data to MySQL
+- Open python/ipl_setup.py
+- Replace 'your_password_here' with your MySQL password
+- Run: python python/ipl_setup.py
 
+### Step 4 - View Dashboard
+Open dashboard/IPL_Dashboard.pbix in Power BI Desktop
 ## 📸 Screenshots
 
 ### Page 1 — IPL Overview
